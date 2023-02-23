@@ -2,21 +2,35 @@
 
 import sys
 import threading
+import numpy as np
 
 
 def compute_height(n, parents):
     # Write this function
     max_height = 0
     # Your code here
+    number = parents[0]
+    for i in range(n):
+        if number== j :
+           number = parents[j]
+           max_height=max_height+1
     return max_height
 
 
 def main():
     # implement input form keyboard and from files
-    
+
+    # file=input()
+    # with open (file, mode='r') as f:
+    #     readen = f.read()
+
     # let user input file name to use, don't allow file names with letter a
     # account for github input inprecision
+    text=input()
+    text=list(map(int,text.split()))
     
+    print(compute_height(text[0],text[1:]))
+
     # input number of elements
     # input values in one variable, separate with space, split these values in an array
     # call the function and output it's result
