@@ -6,7 +6,7 @@ import threading
 
 def compute_height(n, parents):
     # Write this function
-    max_height = 0
+    max_height = 1
     # Your code here
     number = parents[0]
     while number!=-1:
