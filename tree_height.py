@@ -2,7 +2,6 @@
 
 import sys
 import threading
-import numpy as np
 
 
 def compute_height(n, parents):
@@ -10,10 +9,12 @@ def compute_height(n, parents):
     max_height = 0
     # Your code here
     number = parents[0]
-    for i in range(n):
-        if number== j :
-           number = parents[j]
-           max_height=max_height+1
+    while number!=-1:
+        for i in range(n):
+            if number== j :
+                number = parents[j]
+                max_height=max_height+1
+                
     return max_height
 
 
