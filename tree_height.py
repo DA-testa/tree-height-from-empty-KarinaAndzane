@@ -28,10 +28,10 @@ def main():
     # let user input file name to use, don't allow file names with letter a
     # account for github input inprecision
     mode=input()
-    if mode=='I':
+    if 'I' in mode:
          text=input()
         
-    if mode == 'F':
+    if 'F'in mode:
           filename=input()
           with open ("./test/"+filename, mode ='r') as fails:
              text=fails.read()
