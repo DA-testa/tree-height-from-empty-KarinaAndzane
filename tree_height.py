@@ -34,8 +34,10 @@ def main():
     if 'F'in mode:
           filename=input()
           with open ("./test/"+filename, mode ='r') as fails:
-             text=fails.read()
-             
+             n=fails.readLine()
+             text = fails.readLine()
+             text=list(map(int,text.split()))
+             print(compute_height(n,text))
    
     text=list(map(int,text.split()))
     print(compute_height(text[0],text[1:]))
