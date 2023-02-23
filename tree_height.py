@@ -30,14 +30,14 @@ def main():
     mode=input()
     if mode=='I':
          text=input()
-         text=list(map(int,text.split()))
+        
     if mode == 'F':
           filename=input()
           with open ("./test/"+filename, mode ='r') as fails:
              text=fails.read()
-             text=list(map(int,text.split()))
+             
    
-    
+    text=list(map(int,text.split()))
     print(compute_height(text[0],text[1:]))
 
     # input number of elements
