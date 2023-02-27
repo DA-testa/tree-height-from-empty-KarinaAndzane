@@ -29,9 +29,10 @@ def main():
  
     mode=input()
     if "I" in mode:
+         n= input()
          text=input()
          text=list(map(int,text.split()))
-         print(compute_height(text[1:]))
+         print(compute_height(text))
         
     if "F" in mode:
           filename=input()
