@@ -6,41 +6,55 @@ import threading
 
 def compute_height(n, parents):
     # Write this function
-    max_height = 1
+    # max_height = 1
     # Your code here
-    number = parents[0]
-    while number!=-1:
-        for j in range(n):
-            if number== j :
-                number = parents[j]
-                max_height=max_height+1
+    # number = parents[0]
+    # while number!=-1:
+    #     for j in range(n):
+    #         if number== j :
+    #             number = parents[j]
+    #             max_height=max_height+1
                 
+
+
     return max_height
+def length(i, parents):
+    #int inkrement=0
+    #int height=0
+    if parents[i]==-1:
+        return 0
+    else:
+            
+            return 1+ length(parents[i],parents)
 
+def a(parents):
+    height=0
 
+    for i in range (len(parents)):
+        height=max(height, length(i,parents))
+    return height
 def main():
     # implement input form keyboard and from files
 
-    # file=input()
-    # with open (file, mode='r') as f:
-    #     readen = f.read()
 
     # let user input file name to use, don't allow file names with letter a
     # account for github input inprecision
     mode=input()
-    if 'I' in mode:
+    if "I" in mode:
          text=input()
+         text=list(map(int,text.split()))
+         print(a(text[1:]))
         
-    if 'F'in mode:
+    if "F" in mode:
           filename=input()
           with open ("./test/"+filename, mode ='r') as fails:
-             n=fails.readline()
+             n=int(fails.readline())
              text = fails.readline()
              text=list(map(int,text.split()))
              print(compute_height(n,text))
    
-    text=list(map(int,text.split()))
-    print(compute_height(text[0],text[1:]))
+    
+    
 
     # input number of elements
     # input values in one variable, separate with space, split these values in an array
