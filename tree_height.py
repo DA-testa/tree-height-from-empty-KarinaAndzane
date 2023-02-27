@@ -26,10 +26,11 @@ def compute_height(parents):
         length= 1+length(parents[index])
         additional [index]=length
         return length
-max_height=-1
-range1=len(parents)
-for i in range (range1):
-    max_height=max(max_height, length(i))
+    
+    max_height=-1
+    range1=len(parents)
+    for i in range (range1):
+        max_height=max(max_height, length(i))
         
     return max_height
 
