@@ -12,13 +12,9 @@ import threading
 #             if number== j :
 #                 number = parents[j]
 #                 max_height=max_height+1
-                
-
-
 #     return max_height
+
 def length(i, parents):
-    #int inkrement=0
-    #int height=0
     if parents[i]==-1:
         return 0
     return  1+length(parents[i],parents)
@@ -30,11 +26,7 @@ def compute_height(parents):
         
     return max_height + 1
 def main():
-    # implement input form keyboard and from files
-
-
-    # let user input file name to use, don't allow file names with letter a
-    # account for github input inprecision
+ 
     mode=input()
     if "I" in mode:
          text=input()
@@ -42,8 +34,6 @@ def main():
          print(compute_height(text[1:]))
         
     if "F" in mode:
-          filename=input()
-        if 'a' in filename:
           filename=input()
           with open ("./test/"+filename, mode ='r') as fails:
              n=int(fails.readline())
