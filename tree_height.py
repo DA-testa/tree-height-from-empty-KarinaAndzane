@@ -32,7 +32,7 @@ def compute_height(parents):
     for i in range (range1):
         max_height=max(max_height, a(i))
         
-    return max_height +1
+    return max_height
 
 # def compute_height(parents):
 #     range1=len(parents)
