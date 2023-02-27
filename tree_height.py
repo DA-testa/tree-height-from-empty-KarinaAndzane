@@ -47,7 +47,7 @@ def main():
              n=int(fails.readline())
              text = fails.readline()
              text=list(map(int,text.split()))
-             print(compute_height(n,text))
+             print(compute_height(text))
    
     
     
