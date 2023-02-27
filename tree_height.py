@@ -36,13 +36,15 @@ def main():
     # let user input file name to use, don't allow file names with letter a
     # account for github input inprecision
     mode=input()
-    if "I" and not'a'in mode:
+    if "I" in mode:
          text=input()
          text=list(map(int,text.split()))
          print(compute_height(text[1:]))
         
     if "F" in mode:
           filename=input()
+           if 'a' in filename:
+            return;
           with open ("./test/"+filename, mode ='r') as fails:
              n=int(fails.readline())
              text = fails.readline()
