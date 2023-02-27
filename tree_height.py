@@ -43,14 +43,13 @@ def main():
     if "I" in mode:
          text=input()
          text=list(map(int,text.split()))
-         print(compute_height(text[1:]))
+         print(compute_height(text))
         
     if "F" in mode:
           filename=input()
           with open ("./test/"+filename, mode ='r') as fails:
-             n=int(fails.readline())
-             text = fails.readline()
-             text=list(map(int,text.split()))
+            
+             text=list(map(int,fails.readline().split()))
              print(compute_height(text))
    
     
