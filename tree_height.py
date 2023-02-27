@@ -43,7 +43,7 @@ def main():
     if "I" in mode:
          text=input()
          text=list(map(int,text.split()))
-         print(compute_height(text))
+         print(compute_height(text[1:]))
         
     if "F" in mode:
           filename=input()
