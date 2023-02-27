@@ -22,7 +22,7 @@ def length(i, parents):
 def compute_height(parents):
     max_height=-1
     range1=len(parents)
-    for i in range (range1:)
+    for i in range (range1):
         max_height=max(max_height, length(i,parents))
         
     return max_height + 1
