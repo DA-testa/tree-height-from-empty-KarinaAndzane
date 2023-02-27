@@ -28,11 +28,11 @@ def length(i, parents):
             return 1+ length(parents[i],parents)
 
 def compute_height(parents):
-    max_height=1
+    max_height=0
 
     for i in range (len(parents)):
         max_height=max(max_height, length(i,parents))
-    return max_height
+    return max_height+1
 def main():
     # implement input form keyboard and from files
 
