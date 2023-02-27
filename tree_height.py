@@ -18,19 +18,19 @@ import threading
 
 def compute_height(parents):
     additional ={}
-    def length(index):
+    def a(index):
         if index==-1:
             return 0
         if index in additional:
             return additional[index]
-        length= 1+length(parents[index])
+        length= 1+a(parents[index])
         additional [index]=length
         return length
     
     max_height=-1
     range1=len(parents)
     for i in range (range1):
-        max_height=max(max_height, length(i))
+        max_height=max(max_height, a(i))
         
     return max_height +1
 
