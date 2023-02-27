@@ -38,13 +38,13 @@ def compute_height(parents):
         while index!=-1:
             if additional[i]!=0:
                 length=length+additional[index]
-                break;
+                break
             index=parents[index]
             length+=1
         max_height=max(max_height, length)
         additional[i]=length
         
-    return max_height + 1
+    return max_height
 def main():
  
     mode=input()
