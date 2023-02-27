@@ -43,6 +43,8 @@ def main():
         
     if "F" in mode:
           filename=input()
+        if 'a' in filename:
+          filename=input()
           with open ("./test/"+filename, mode ='r') as fails:
              n=int(fails.readline())
              text = fails.readline()
