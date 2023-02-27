@@ -4,20 +4,20 @@ import sys
 import threading
 
 
-def compute_height(n, parents):
-    # Write this function
-    # max_height = 1
-    # Your code here
-    # number = parents[0]
-    # while number!=-1:
-    #     for j in range(n):
-    #         if number== j :
-    #             number = parents[j]
-    #             max_height=max_height+1
+# def compute_height(n, parents):
+#     Write this function
+#     max_height = 1
+#     Your code here
+#     number = parents[0]
+#     while number!=-1:
+#         for j in range(n):
+#             if number== j :
+#                 number = parents[j]
+#                 max_height=max_height+1
                 
 
 
-    return max_height
+#     return max_height
 def length(i, parents):
     #int inkrement=0
     #int height=0
@@ -27,12 +27,12 @@ def length(i, parents):
             
             return 1+ length(parents[i],parents)
 
-def a(parents):
-    height=0
+def compute_height(parents):
+    max_height=0
 
     for i in range (len(parents)):
         height=max(height, length(i,parents))
-    return height
+    return max_height
 def main():
     # implement input form keyboard and from files
 
@@ -43,7 +43,7 @@ def main():
     if "I" in mode:
          text=input()
          text=list(map(int,text.split()))
-         print(a(text[1:]))
+         print(compute_height(text[1:]))
         
     if "F" in mode:
           filename=input()
