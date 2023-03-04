@@ -62,10 +62,11 @@ def main():
         
     if "F" in mode:
           filename=input()
-          with open ("./test/"+filename, mode ='r') as fails:
-             n=int(fails.readline())
-             text=list(map(int,fails.readline().split()))
-             print(compute_height(text))
+          if "a" not in filename:
+                with open ("./test/"+filename, mode ='r') as fails:
+                 n=int(fails.readline())
+                 text=list(map(int,fails.readline().split()))
+                 print(compute_height(text))
    
     
     
