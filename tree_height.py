@@ -1,22 +1,77 @@
-# python3
-
+#221RDB302
 import sys
 import threading
 
 
-def compute_height(n, parents):
-    # Write this function
-    max_height = 0
-    # Your code here
+# def compute_height(n, parents):
+#     Write this function
+#     max_height = 1
+#     Your code here
+#     number = parents[0]
+#     while number!=-1:
+#         for j in range(n):
+#             if number== j :
+#                 number = parents[j]
+#                 max_height=max_height+1
+#     return max_height
+
+
+
+def compute_height(parents):
+    additional ={}
+    def a(index):
+        if index==-1:
+            return 0
+        if index in additional:
+            return additional[index]
+        length= 1+a(parents[index])
+        additional [index]=length
+        return length
+    
+    max_height=-1
+    range1=len(parents)
+    for i in range (range1):
+        max_height=max(max_height, a(i))
+        
     return max_height
 
-
+# def compute_height(parents):
+#     range1=len(parents)
+#     additional = [0]*range1
+#     max_height=0
+    
+#     for i in range (range1):
+#         length=0
+#         index=i
+#         while index!=-1:
+#             if additional[i]!=0:
+#                 length=length+additional[index]
+#                 break
+#             index=parents[index]
+#             length+=1
+#         max_height=max(max_height, length)
+#         additional[i]=length
+        
+#     return max_height
 def main():
-    # implement input form keyboard and from files
+ 
+    mode=input()
+    if "I" in mode:
+         n= input()
+         text=list(map(int,input().split()))
+         print(compute_height(text))
+        
+    if "F" in mode:
+          filename=input()
+          if "a" not in filename:
+                with open ("./test/"+filename, mode ='r') as fails:
+                 n=int(fails.readline())
+                 text=list(map(int,fails.readline().split()))
+                 print(compute_height(text))
+   
     
-    # let user input file name to use, don't allow file names with letter a
-    # account for github input inprecision
     
+
     # input number of elements
     # input values in one variable, separate with space, split these values in an array
     # call the function and output it's result
